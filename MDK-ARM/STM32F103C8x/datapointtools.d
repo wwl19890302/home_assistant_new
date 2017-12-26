@@ -1,0 +1,9 @@
+STM32F103C8x\datapointtools.o: ..\Utils\dataPointTools.c
+STM32F103C8x\datapointtools.o: ..\Utils\dataPointTools.h
+STM32F103C8x\datapointtools.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+STM32F103C8x\datapointtools.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+STM32F103C8x\datapointtools.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+STM32F103C8x\datapointtools.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
+STM32F103C8x\datapointtools.o: ..\Utils\common.h
+STM32F103C8x\datapointtools.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+STM32F103C8x\datapointtools.o: D:\Keil\ARM\ARMCC\bin\..\include\ctype.h

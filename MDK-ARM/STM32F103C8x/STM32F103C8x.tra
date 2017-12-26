@@ -1,0 +1,48 @@
+*** Creating Trace Output File 'STM32F103C8x\STM32F103C8x.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_msp.o"'
+### List of Objects: adding '"stm32f103c8x\main.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_it.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_tim_ex.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_gpio.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_flash_ex.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_dma.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_rcc_ex.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_rcc.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_flash.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_gpio_ex.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_tim.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_cortex.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_pwr.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_uart.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_spi.o"'
+### List of Objects: adding '"stm32f103c8x\stm32f1xx_hal_spi_ex.o"'
+### List of Objects: adding '"stm32f103c8x\startup_stm32f103xb.o"'
+### List of Objects: adding '"stm32f103c8x\system_stm32f1xx.o"'
+### List of Objects: adding '"stm32f103c8x\gizwits_product.o"'
+### List of Objects: adding '"stm32f103c8x\gizwits_protocol.o"'
+### List of Objects: adding '"stm32f103c8x\hal_key.o"'
+### List of Objects: adding '"stm32f103c8x\hal_led.o"'
+### List of Objects: adding '"stm32f103c8x\hal_nrf24l01.o"'
+### List of Objects: adding '"stm32f103c8x\hal_relay.o"'
+### List of Objects: adding '"stm32f103c8x\common.o"'
+### List of Objects: adding '"stm32f103c8x\datapointtools.o"'
+### List of Objects: adding '"stm32f103c8x\ringbuffer.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "stm32f103c8x\stm32f1xx_hal_msp.o" "stm32f103c8x\main.o" "stm32f103c8x\stm32f1xx_it.o" "stm32f103c8x\stm32f1xx_hal_tim_ex.o" "stm32f103c8x\stm32f1xx_hal.o" "stm32f103c8x\stm32f1xx_hal_gpio.o" "stm32f103c8x\stm32f1xx_hal_flash_ex.o" "stm32f103c8x\stm32f1xx_hal_dma.o" "stm32f103c8x\stm32f1xx_hal_rcc_ex.o" "stm32f103c8x\stm32f1xx_hal_rcc.o" "stm32f103c8x\stm32f1xx_hal_flash.o" "stm32f103c8x\stm32f1xx_hal_gpio_ex.o" "stm32f103c8x\stm32f1xx_hal_tim.o" "stm32f103c8x\stm32f1xx_hal_cortex.o" "stm32f103c8x\stm32f1xx_hal_pwr.o" "stm32f103c8x\stm32f1xx_hal_uart.o" "stm32f103c8x\stm32f1xx_hal_spi.o" "stm32f103c8x\stm32f1xx_hal_spi_ex.o" "stm32f103c8x\startup_stm32f103xb.o" "stm32f103c8x\system_stm32f1xx.o" "stm32f103c8x\gizwits_product.o" "stm32f103c8x\gizwits_protocol.o" "stm32f103c8x\hal_key.o" "stm32f103c8x\hal_led.o" "stm32f103c8x\hal_nrf24l01.o" "stm32f103c8x\hal_relay.o" "stm32f103c8x\common.o" "stm32f103c8x\datapointtools.o" "stm32f103c8x\ringbuffer.o" 
+--library_type=microlib --strict --scatter "STM32F103C8x\STM32F103C8x.sct" 
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list "STM32F103C8x.map" -o STM32F103C8x\STM32F103C8x.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'STM32F103C8x\STM32F103C8x.axf'
+### ADS-LD Command File: 'STM32F103C8x\STM32F103C8x.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'STM32F103C8x\STM32F103C8x.lnp', Handle=0x00000BAC
+### Writing '.lnp' file
+### ADS-LD Command file 'STM32F103C8x\STM32F103C8x.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
