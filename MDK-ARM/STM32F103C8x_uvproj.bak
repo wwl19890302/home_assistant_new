@@ -350,7 +350,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine />
-              <IncludePath>../Inc; ../Drivers/STM32F1xx_HAL_Driver/Inc; ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy; ../Drivers/CMSIS/Device/ST/STM32F1xx/Include; ../Drivers/CMSIS/Include; ..\Gizwits; ..\Hal; ..\Utils</IncludePath>
+              <IncludePath>../Inc;  ../Drivers/STM32F1xx_HAL_Driver/Inc;  ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;  ../Drivers/CMSIS/Include;  ..\Gizwits;  ..\Hal;  ..\Utils</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -481,15 +481,17 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
             </File>
-          <File>
+            <File>
               <FileName>stm32f1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c</FilePath>
-            </File><File>
+            </File>
+            <File>
               <FileName>stm32f1xx_hal_spi_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.c</FilePath>
-            </File></Files>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Application/MDK-ARM</GroupName>
@@ -553,16 +555,6 @@
               <FileName>hal_uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Hal\Hal_Usart\hal_uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>hal_watchdog.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Hal\Hal_Watchdog\hal_watchdog.c</FilePath>
-            </File>
-            <File>
-              <FileName>spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Hal\SPI\spi.c</FilePath>
             </File>
           </Files>
         </Group>

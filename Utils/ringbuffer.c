@@ -134,6 +134,7 @@ int32_t ICACHE_FLASH_ATTR rbWrite(rb_t *rb, const void *data, size_t count)
 
     if (count >= rbCanWrite(rb))
     {
+		GIZWITS_LOG("rbcanwrite:%d, rbcap:%d \n",rbCanWrite(rb),rbCapacity(rb));
         return -2;
     }
 
