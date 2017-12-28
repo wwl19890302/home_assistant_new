@@ -84,47 +84,44 @@ int8_t gizwitsEventProcess(eventInfo_t *info, uint8_t *gizdata, uint32_t len)
         {
           //user handle
 			relay_on(0);//ledon(1);
-			tx_tmp_buf[5] = 1;
-			tx_tmp_buf[6] = 0;
         }
         else
         {
           //user handle    
 			relay_off(0);//ledoff(1);
-			tx_tmp_buf[5] = 0;
-			tx_tmp_buf[6] = 1;
         }
-		
-
-		
         break;
       case EVENT_light2:
-        currentDataPoint.valuelight2 = dataPointPtr->valuelight2;
+//        currentDataPoint.valuelight2 = dataPointPtr->valuelight2;
         GIZWITS_LOG("Evt: EVENT_light2 %d \n", currentDataPoint.valuelight2);
-        if(0x01 == currentDataPoint.valuelight2)
+        if(0x01 == dataPointPtr->valuelight2)
         {
           //user handle
+			tx_tmp_buf[5] = 1;
         }
         else
         {
-          //user handle    
+          //user handle   
+			tx_tmp_buf[5] = 0;			
         }
-				NRF24L01_TX_Mode();
-		NRF24L01_TxPacket(tx_tmp_buf);
-		NRF24L01_RX_Mode();
+		NRF24L01_tx_cmd(tx_tmp_buf);
+
 		GIZWITS_LOG("Evt: EVENT_light2 \n");
         break;
       case EVENT_light3:
-        currentDataPoint.valuelight3 = dataPointPtr->valuelight3;
+//        currentDataPoint.valuelight3 = dataPointPtr->valuelight3;
         GIZWITS_LOG("Evt: EVENT_light3 %d \n", currentDataPoint.valuelight3);
-        if(0x01 == currentDataPoint.valuelight3)
+        if(0x01 == dataPointPtr->valuelight3)
         {
           //user handle
+			tx_tmp_buf[6] = 1;
         }
         else
         {
           //user handle    
+			tx_tmp_buf[6] = 0;
         }
+		NRF24L01_tx_cmd(tx_tmp_buf);
         break;
       case EVENT_light4:
         currentDataPoint.valuelight4 = dataPointPtr->valuelight4;
@@ -506,7 +503,7 @@ PUTCHAR_PROTOTYPE
 {
   /* Place your implementation of fputc here */
   /* e.g. write a character to the USART1 and Loop until the end of transmission */
-  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF);
  
   return ch;
 }

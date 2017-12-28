@@ -235,6 +235,12 @@ void NRF24L01_TX_Mode(void)
 	NRF24L01_CE=1;//CE为高,10us后启动发送
 }		  
 
+void NRF24L01_tx_cmd(uint8_t *buf)
+{
+	NRF24L01_TX_Mode();
+	NRF24L01_TxPacket(buf);
+	NRF24L01_RX_Mode();
+}
 
 
 

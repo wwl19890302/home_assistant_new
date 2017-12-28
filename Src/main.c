@@ -151,8 +151,8 @@ void key3ShortPress(void)
     GIZWITS_LOG("KEY3 PRESS ,led_color custom\n");
 	HAL_GPIO_TogglePin(relay0_gpio, relay0_pin);
 	if(HAL_GPIO_ReadPin(relay0_gpio, relay0_pin))	
-		{currentDataPoint.valuelight1 = 0x00;}
-	else	{currentDataPoint.valuelight1 = 0x01;}
+		{currentDataPoint.valuelight1 = 0x01;}
+	else	{currentDataPoint.valuelight1 = 0x00;}
 //    ledon(0);ledon(1);
 //	currentDataPoint.valueLED_Color = LED_Color_VALUE0;
 }
@@ -251,31 +251,33 @@ int main(void)
 	ledGpioInit();
 	relayGpioInit();
 	NRF24L01_Init();
+	NRF24L01_RX_Mode();
 	GIZWITS_LOG("MCU Init Success \n");
+	
   /* USER CODE END 2 */
-NRF24L01_TX_Mode();
+	
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
- 	  printf("111");
+//  	  printf("111");
 // 	  while(NRF24L01_Check())
 // 	  {printf("24l01 error\n");}
   /* USER CODE END WHILE */
-				NRF24L01_TX_Mode();
-		NRF24L01_TxPacket(tx_tmp_buf);
-	  printf("222");
-		NRF24L01_RX_Mode();
+// 				NRF24L01_TX_Mode();
+// 		NRF24L01_TxPacket(tx_tmp_buf);
+// 	  printf("222");
+// 		NRF24L01_RX_Mode();
   /* USER CODE BEGIN 3 */
 		userHandle();
 		gizwitsHandle((dataPoint_t *)&currentDataPoint);
 
 //		huart2.Instance->DR = (0x31 & (uint16_t)0x01FF);
 
-// 	  if(NRF24L01_RxPacket(rx_tmp_buf) == 0)	//一旦接收到消息，则显示出来
-// 	  {
-// 		rx_data_pro();
-// 	  }
+	  if(NRF24L01_RxPacket(rx_tmp_buf) == 0)	//一旦接收到消息，则显示出来
+	  {
+		rx_data_pro();
+	  }
   }
   /* USER CODE END 3 */
 
