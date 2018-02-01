@@ -546,6 +546,16 @@
               <FileType>1</FileType>
               <FilePath>..\Hal\Hal_relay\Hal_relay.c</FilePath>
             </File>
+            <File>
+              <FileName>homeassistant_product.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\Hal_nrf24l01\homeassistant_product.c</FilePath>
+            </File>
+            <File>
+              <FileName>homeassistant_protocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Hal\Hal_nrf24l01\homeassistant_protocol.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

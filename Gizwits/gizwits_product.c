@@ -22,6 +22,7 @@
 #include "Hal_led/hal_led.h"
 #include "Hal_relay/hal_relay.h"
 #include "Hal_nrf24l01/Hal_nrf24l01.h"
+#include "homeassistant_product.h"
 
 static uint32_t timerMsCount;
 uint8_t aRxBuffer;
@@ -93,107 +94,131 @@ int8_t gizwitsEventProcess(eventInfo_t *info, uint8_t *gizdata, uint32_t len)
         break;
       case EVENT_light2:
 //        currentDataPoint.valuelight2 = dataPointPtr->valuelight2;
-        GIZWITS_LOG("Evt: EVENT_light2 %d \n", currentDataPoint.valuelight2);
-        if(0x01 == dataPointPtr->valuelight2)
-        {
-          //user handle
-			tx_tmp_buf[5] = 1;
-        }
-        else
-        {
-          //user handle   
-			tx_tmp_buf[5] = 0;			
-        }
-		NRF24L01_tx_cmd(tx_tmp_buf);
+        GIZWITS_LOG("Evt: EVENT_light2 %d \n", dataPointPtr->valuelight2);
+
+        sub1_data.valuelight2 = dataPointPtr->valuelight2;
+        control_flag.sub1 = 1;
+//        if(0x01 == dataPointPtr->valuelight2)
+//        {
+//          //user handle
+//			tx_tmp_buf[5] = 1;
+//        }
+//        else
+//        {
+//          //user handle
+//			tx_tmp_buf[5] = 0;
+//        }
+//		NRF24L01_tx_cmd(tx_tmp_buf);
 
 		GIZWITS_LOG("Evt: EVENT_light2 \n");
         break;
       case EVENT_light3:
 //        currentDataPoint.valuelight3 = dataPointPtr->valuelight3;
-        GIZWITS_LOG("Evt: EVENT_light3 %d \n", currentDataPoint.valuelight3);
-        if(0x01 == dataPointPtr->valuelight3)
-        {
-          //user handle
-			tx_tmp_buf[6] = 1;
-        }
-        else
-        {
-          //user handle    
-			tx_tmp_buf[6] = 0;
-        }
-		NRF24L01_tx_cmd(tx_tmp_buf);
+        GIZWITS_LOG("Evt: EVENT_light3 %d \n", dataPointPtr->valuelight3);
+
+        sub1_data.valuelight3 = dataPointPtr->valuelight3;
+        control_flag.sub1 = 1;
+//        if(0x01 == dataPointPtr->valuelight3)
+//        {
+//          //user handle
+//			tx_tmp_buf[6] = 1;
+//        }
+//        else
+//        {
+//          //user handle
+//			tx_tmp_buf[6] = 0;
+//        }
+//		NRF24L01_tx_cmd(tx_tmp_buf);
         break;
       case EVENT_light4:
-        currentDataPoint.valuelight4 = dataPointPtr->valuelight4;
-        GIZWITS_LOG("Evt: EVENT_light4 %d \n", currentDataPoint.valuelight4);
-        if(0x01 == currentDataPoint.valuelight4)
-        {
-          //user handle
-        }
-        else
-        {
-          //user handle    
-        }
+//        currentDataPoint.valuelight4 = dataPointPtr->valuelight4;
+        GIZWITS_LOG("Evt: EVENT_light4 %d \n", dataPointPtr->valuelight4);
+
+        sub2_data.valuelight4 = dataPointPtr->valuelight4;
+        control_flag.sub2 = 1;
+//        if(0x01 == currentDataPoint.valuelight4)
+//        {
+//          //user handle
+//        }
+//        else
+//        {
+//          //user handle
+//        }
         break;
       case EVENT_light5:
-        currentDataPoint.valuelight5 = dataPointPtr->valuelight5;
-        GIZWITS_LOG("Evt: EVENT_light5 %d \n", currentDataPoint.valuelight5);
-        if(0x01 == currentDataPoint.valuelight5)
-        {
-          //user handle
-        }
-        else
-        {
-          //user handle    
-        }
+//        currentDataPoint.valuelight5 = dataPointPtr->valuelight5;
+        GIZWITS_LOG("Evt: EVENT_light5 %d \n", dataPointPtr->valuelight5);
+
+        sub2_data.valuelight5 = dataPointPtr->valuelight5;
+        control_flag.sub2 = 1;
+//        if(0x01 == currentDataPoint.valuelight5)
+//        {
+//          //user handle
+//        }
+//        else
+//        {
+//          //user handle
+//        }
         break;
       case EVENT_light6:
-        currentDataPoint.valuelight6 = dataPointPtr->valuelight6;
-        GIZWITS_LOG("Evt: EVENT_light6 %d \n", currentDataPoint.valuelight6);
-        if(0x01 == currentDataPoint.valuelight6)
-        {
-          //user handle
-        }
-        else
-        {
-          //user handle    
-        }
+//        currentDataPoint.valuelight6 = dataPointPtr->valuelight6;
+        GIZWITS_LOG("Evt: EVENT_light6 %d \n", dataPointPtr->valuelight6);
+
+        sub2_data.valuelight6 = dataPointPtr->valuelight6;
+        control_flag.sub2 = 1;
+//        if(0x01 == currentDataPoint.valuelight6)
+//        {
+//          //user handle
+//        }
+//        else
+//        {
+//          //user handle
+//        }
         break;
       case EVENT_light7:
-        currentDataPoint.valuelight7 = dataPointPtr->valuelight7;
-        GIZWITS_LOG("Evt: EVENT_light7 %d \n", currentDataPoint.valuelight7);
-        if(0x01 == currentDataPoint.valuelight7)
-        {
-          //user handle
-        }
-        else
-        {
-          //user handle    
-        }
+//        currentDataPoint.valuelight7 = dataPointPtr->valuelight7;
+        GIZWITS_LOG("Evt: EVENT_light7 %d \n", dataPointPtr->valuelight7);
+
+        sub3_data.valuelight7 = dataPointPtr->valuelight7;
+        control_flag.sub3 = 1;
+//        if(0x01 == currentDataPoint.valuelight7)
+//        {
+//          //user handle
+//        }
+//        else
+//        {
+//          //user handle
+//        }
         break;
       case EVENT_light8:
-        currentDataPoint.valuelight8 = dataPointPtr->valuelight8;
-        GIZWITS_LOG("Evt: EVENT_light8 %d \n", currentDataPoint.valuelight8);
-        if(0x01 == currentDataPoint.valuelight8)
-        {
-          //user handle
-        }
-        else
-        {
-          //user handle    
-        }
+//        currentDataPoint.valuelight8 = dataPointPtr->valuelight8;
+        GIZWITS_LOG("Evt: EVENT_light8 %d \n", dataPointPtr->valuelight8);
+
+        sub3_data.valuelight8 = dataPointPtr->valuelight8;
+        control_flag.sub3 = 1;
+//        if(0x01 == currentDataPoint.valuelight8)
+//        {
+//          //user handle
+//        }
+//        else
+//        {
+//          //user handle
+//        }
         break;
       case EVENT_light9:
-        currentDataPoint.valuelight9 = dataPointPtr->valuelight9;
-        GIZWITS_LOG("Evt: EVENT_light9 %d \n", currentDataPoint.valuelight9);
-        if(0x01 == currentDataPoint.valuelight9)
-        {
-          //user handle
-        }
-        else
-        {
-          //user handle    
-        }
+//        currentDataPoint.valuelight9 = dataPointPtr->valuelight9;
+        GIZWITS_LOG("Evt: EVENT_light9 %d \n", dataPointPtr->valuelight9);
+
+        sub3_data.valuelight9 = dataPointPtr->valuelight9;
+        control_flag.sub3 = 1;
+//        if(0x01 == currentDataPoint.valuelight9)
+//        {
+//          //user handle
+//        }
+//        else
+//        {
+//          //user handle
+//        }
         break;
       case EVENT_water_heater:
         currentDataPoint.valuewater_heater = dataPointPtr->valuewater_heater;
@@ -232,16 +257,19 @@ int8_t gizwitsEventProcess(eventInfo_t *info, uint8_t *gizdata, uint32_t len)
         }
         break;
       case EVENT_air_condition_onoff:
-        currentDataPoint.valueair_condition_onoff = dataPointPtr->valueair_condition_onoff;
-        GIZWITS_LOG("Evt: EVENT_air_condition_onoff %d \n", currentDataPoint.valueair_condition_onoff);
-        if(0x01 == currentDataPoint.valueair_condition_onoff)
-        {
-          //user handle
-        }
-        else
-        {
-          //user handle    
-        }
+//        currentDataPoint.valueair_condition_onoff = dataPointPtr->valueair_condition_onoff;
+        GIZWITS_LOG("Evt: EVENT_air_condition_onoff %d \n", dataPointPtr->valueair_condition_onoff);
+
+        sub4_data.valueair_condition_onoff = dataPointPtr->valueair_condition_onoff;
+        control_flag.sub4 = 1;
+//        if(0x01 == currentDataPoint.valueair_condition_onoff)
+//        {
+//          //user handle
+//        }
+//        else
+//        {
+//          //user handle
+//        }
         break;
       case EVENT_music_onoff:
         currentDataPoint.valuemusic_onoff = dataPointPtr->valuemusic_onoff;
@@ -317,24 +345,30 @@ int8_t gizwitsEventProcess(eventInfo_t *info, uint8_t *gizdata, uint32_t len)
         break;
 
       case EVENT_air_condition_mode:
-        currentDataPoint.valueair_condition_mode = dataPointPtr->valueair_condition_mode;
-        GIZWITS_LOG("Evt: EVENT_air_condition_mode %d\n", currentDataPoint.valueair_condition_mode);
-        switch(currentDataPoint.valueair_condition_mode)
-        {
-          case air_condition_mode_VALUE0:
-            //user handle
-            break;
-          case air_condition_mode_VALUE1:
-            //user handle
-            break;
-          default:
-            break;
-        }
+//        currentDataPoint.valueair_condition_mode = dataPointPtr->valueair_condition_mode;
+        GIZWITS_LOG("Evt: EVENT_air_condition_mode %d\n", dataPointPtr->valueair_condition_mode);
+
+        sub4_data.valueair_condition_mode = dataPointPtr->valueair_condition_mode;
+        control_flag.sub4 = 1;
+//        switch(currentDataPoint.valueair_condition_mode)
+//        {
+//          case air_condition_mode_VALUE0:
+//            //user handle
+//            break;
+//          case air_condition_mode_VALUE1:
+//            //user handle
+//            break;
+//          default:
+//            break;
+//        }
         break;
 
       case EVENT_air_condition_temperature:
-        currentDataPoint.valueair_condition_temperature = dataPointPtr->valueair_condition_temperature;
-        GIZWITS_LOG("Evt:EVENT_air_condition_temperature %d\n",currentDataPoint.valueair_condition_temperature);
+//        currentDataPoint.valueair_condition_temperature = dataPointPtr->valueair_condition_temperature;
+        GIZWITS_LOG("Evt:EVENT_air_condition_temperature %d\n",dataPointPtr->valueair_condition_temperature);
+
+        sub4_data.valueair_condition_temperature = dataPointPtr->valueair_condition_temperature;
+        control_flag.sub4 = 1;
         //user handle
         break;
 

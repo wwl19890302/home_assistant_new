@@ -1,0 +1,4 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99 
+-I D:\Keil\ARM\RV31\INC 
+-I D:\Keil\ARM\CMSIS\Include 
+-DUSE_HAL_DRIVER -DSTM32F103xB -o "STM32F103C8x\homeassistant_product.o" --omf_browse "STM32F103C8x\homeassistant_product.crf" --depend "STM32F103C8x\homeassistant_product.d" "..\Hal\Hal_nrf24l01\homeassistant_product.c"

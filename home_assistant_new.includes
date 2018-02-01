@@ -1,0 +1,13 @@
+Drivers/CMSIS/Device/ST/STM32F1xx/Include
+Drivers/CMSIS/Include
+Drivers/CMSIS/RTOS/Template
+Drivers/STM32F1xx_HAL_Driver/Inc
+Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
+Gizwits
+Hal/Hal_key
+Hal/Hal_led
+Hal/Hal_nrf24l01
+Hal/Hal_relay
+Inc
+MDK-ARM/RTE
+Utils
