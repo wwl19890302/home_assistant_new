@@ -36,3 +36,4 @@ STM32F103C8x\gizwits_protocol.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
 STM32F103C8x\gizwits_protocol.o: ..\Utils\common.h
 STM32F103C8x\gizwits_protocol.o: D:\Keil\ARM\ARMCC\bin\..\include\ctype.h
 STM32F103C8x\gizwits_protocol.o: ..\Utils\dataPointTools.h
+STM32F103C8x\gizwits_protocol.o: ..\Hal\Hal_nrf24l01/homeassistant_product.h

@@ -16,6 +16,7 @@
 #include "ringBuffer.h"
 #include "gizwits_product.h"
 #include "dataPointTools.h"
+#include "Hal_nrf24l01/homeassistant_product.h"
 
 /** Protocol global variables **/
 gizwitsProtocol_t gizwitsProtocol;
@@ -532,6 +533,9 @@ static int8_t gizProtocolIssuedProcess(char *did, uint8_t *inData, uint32_t inLe
                 break;
             
             case ACTION_READ_DEV_STATUS:
+                ha_datapoint_tx.cmd = READ_DEV_STATUS;
+                HA_read_status();
+
                 if(0 == gizDataPoints2ReportData(&gizwitsProtocol.gizLastDataPoint,&gizwitsProtocol.reportData.devStatus))
                 {
                     memcpy(outData+1, (uint8_t *)&gizwitsProtocol.reportData.devStatus, sizeof(gizwitsReport_t));
@@ -698,6 +702,10 @@ static void gizDevReportPolicy(dataPoint_t *currentData)
     if((0 == (timeNow % (600000))) && (lastRepTime != timeNow))
     {
         GIZWITS_LOG("Info: 600S report data\n");
+
+        ha_datapoint_tx.cmd = READ_DEV_STATUS;
+        HA_read_status();
+
         if(0 == gizDataPoints2ReportData(currentData,&gizwitsProtocol.reportData.devStatus))
         {
             gizReportData(ACTION_REPORT_DEV_STATUS, (uint8_t *)&gizwitsProtocol.reportData.devStatus, sizeof(devStatus_t));

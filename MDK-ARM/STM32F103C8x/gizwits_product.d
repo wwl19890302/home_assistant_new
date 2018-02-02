@@ -41,3 +41,4 @@ STM32F103C8x\gizwits_product.o: ..\Hal\Hal_relay/hal_relay.h
 STM32F103C8x\gizwits_product.o: ..\Hal\Hal_led/sys.h
 STM32F103C8x\gizwits_product.o: ..\Hal\Hal_nrf24l01/Hal_nrf24l01.h
 STM32F103C8x\gizwits_product.o: ..\Hal\Hal_led/sys.h
+STM32F103C8x\gizwits_product.o: ..\Hal\Hal_nrf24l01/homeassistant_product.h
